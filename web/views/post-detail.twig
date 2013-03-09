@@ -1,0 +1,16 @@
+{% extends 'layout.twig' %}
+ 
+{% block content %}
+    <div class="post">
+        <h1>{{ post.title }}</h1>
+        <div class="labels"><span class="label">{{ post.createdAt|date('d.m.Y') }}</span> <span class="label">{{ post.owner.username }}</span></div>
+        <div class="detail">{{ post.content }}</div>
+    </div>
+    <hr>
+    <div class="comment-form">
+        <form action="comment/add/" method="POST">
+            {{ form_widget(commentForm) }}
+            <input type="submit" name="submit" class="button" />
+        </form>
+    </div>
+{% endblock %}

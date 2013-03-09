@@ -1,0 +1,14 @@
+{% extends 'layout.twig' %}
+ 
+{% block content %}
+    <div class="posts">
+    {% for post in posts %}
+        <div class="item">
+            <h3><a href="post/{{ post.id }}">{{ post.title }}</a></h3>
+            <div class="labels"><span class="label">{{ post.createdAt|date('d.m.Y') }}</span> <span class="label">{{ post.owner.username }}</span></div>
+            <div class="annotation">{{ post.annotation }}</div>
+            <hr>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}

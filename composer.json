@@ -1,0 +1,20 @@
+{
+    "require": {
+        "silex/silex": "1.0.*@dev",
+        "twig/twig": ">=1.8,<2.0-dev",
+        "symfony/twig-bridge": "2.1.*",
+        "taluu/doctrine-orm-provider": "1.0.*",
+        "symfony/form": "~2.1",
+        "symfony/translation": "~2.1",
+        "symfony/locale": "~2.1",
+        "symfony/security": "~2.1"
+    },
+    
+    "autoload": {
+        "psr-0": {
+            "Blog": "src/"
+         }
+    },
+
+    "minimum-stability": "dev"
+}

@@ -1,0 +1,33 @@
+.button{
+    margin: 0;
+}
+
+.posts{
+    
+}
+.posts .item{
+    
+}
+.posts .item h3{
+    margin-bottom: 4px;
+}
+.posts .item h3 a{
+    color: inherit;
+    text-decoration: underline;
+}
+.posts .item .labels{
+    margin-bottom: 20px;
+}
+.posts .item .annotation{
+    clear: left;
+}
+
+.post{
+    
+}
+.post h1{
+    margin-bottom: 4px;
+}
+.post .labels{
+    margin-bottom: 20px;
+}

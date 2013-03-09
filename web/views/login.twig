@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Blog App</title>
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/foundation.css" />
+</head>
+<body style="margin: 40px 0 0 0;">
+<div class="row">
+  <div class="small-5 small-centered columns">
+  <div class="panel">
+    <h2>Вход в систему</h2>
+    {% if is_granted('ROLE_USER') %}
+        <p>Welcome {{ app.security.token.user.username }}!</p>
+        <p><a href="{{ path('logout') }}">Log out</a></p>
+    {% else %}
+        <form action="{{ path('login_check') }}" method="post">
+            <p><label for="username">Username: </label><input id="username" type="text" name="_username" value="{{ last_username }}"></p>
+            <p><label for="password">Password: </label><input id="password" type="password" name="_password"></p>
+            <input type="submit" value="Log in" class="button" style="margin: 0">
+            {% if error %}
+                <div class="error">{{ error }}</div>
+            {% endif %}
+        </form>
+    {% endif %}
+    </div>
+  </div>
+</div>
+</body>
+</html>
