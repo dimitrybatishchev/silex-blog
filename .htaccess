@@ -1,4 +1,5 @@
 <IfModule mod_rewrite.c>
+<<<<<<< HEAD
    Options -MultiViews
    RewriteEngine On
    RewriteBase /silex-test/web
@@ -6,3 +7,11 @@
    RewriteRule ^ index.php [L]
 </IfModule>
 
+=======
+   RewriteEngine On
+   #RewriteBase /var/www/silex-blog
+   RewriteCond %{REQUEST_FILENAME} !-f
+   RewriteCond %{REQUEST_FILENAME} !-d
+   RewriteRule ^(.*)$ /index.php [QSA,L]
+</IfModule>
+>>>>>>> 062d8c74372ab30765638185db77b26e1ce8c2ac

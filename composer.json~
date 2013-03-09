@@ -2,8 +2,13 @@
     "require": {
         "silex/silex": "1.0.*@dev",
         "twig/twig": ">=1.8,<2.0-dev",
+<<<<<<< HEAD
         "symfony/twig-bridge": "2.1.*",
     },
 
     "minimum-stability": "dev"
+=======
+        "symfony/twig-bridge": "2.1.*"
+    }
+>>>>>>> 062d8c74372ab30765638185db77b26e1ce8c2ac
 }
